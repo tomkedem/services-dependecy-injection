@@ -19,13 +19,13 @@ export class TasksListComponent {
         return this.tasksService.allTasks();
       case 'open':
         return this.tasksService.allTasks().
-        filter(task => task.status == 'OPEN');  
+        filter(task => task.status === 'OPEN');  
       case 'in-progress':
         return this.tasksService.allTasks().
-        filter(task => task.status == 'IN_PROGRESS');  
+        filter(task => task.status === 'IN_PROGRESS');  
       case 'done':
         return this.tasksService.allTasks().
-        filter(task => task.status == 'DONE');  
+        filter(task => task.status === 'DONE');  
       default:
         return this.tasksService.allTasks();        
     }
